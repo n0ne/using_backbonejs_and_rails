@@ -1,0 +1,8 @@
+<h4>All posts</h4>
+<p>
+	<a href="#posts/new">Add Post</a>
+</p>
+
+<div id='postsList'>
+	<ul id="postslist"></ul>
+</div>

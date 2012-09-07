@@ -1,0 +1,11 @@
+<li>
+	<div style="width: 500px; float: left;">
+		<a href="#posts/<%= @post.get('id') %>">
+			<%= @post.get('title') %>
+		</a>
+	</div>
+	<div>
+		<a href="" class="edit">Edit</a>
+		<a href="" class="delete">Delete</a>
+	</div>
+</li>

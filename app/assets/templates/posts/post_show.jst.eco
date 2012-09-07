@@ -1,0 +1,12 @@
+<p>
+	Title: <%= @post.get('title') %>
+</p>
+
+<p>
+	Content: <%= @post.get('content') %>
+</p>
+
+<p>
+	<a href="/#">Home</a>
+	<a href="" class="edit">Edit</a>
+</p>

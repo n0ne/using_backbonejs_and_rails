@@ -1,0 +1,12 @@
+Edit post
+<form id="update_post">
+	<p>
+		<label for="title">Title:</label>
+		<input type="text" name="title"   id="update_post_title" value="<%= @post.get('title') %>">
+	</p>
+	<p>
+		<label for="title">Title:</label>
+		<input type="text" name="content" id="update_post_content" value="<%= @post.get('content') %>">
+	</p>
+	<input type="submit" value="Update">
+</form>

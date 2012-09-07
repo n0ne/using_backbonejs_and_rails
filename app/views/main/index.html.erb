@@ -1,0 +1,17 @@
+<div id="container">
+	<div id="content">All post here</div>
+</div>
+
+
+<%= content_tag :div, '', id: "all_posts_data", data: {posts: Post.all} %>
+<!--
+<% @posts.each do |post| %>
+	<li><%= post.title %></li>
+<% end %>
+ -->
+<script>
+	// $(document).ready(function() {
+	    // var posts = new App.Collections.Posts();
+		//posts.reset(<%= raw(Post.all.to_json) %>);
+	// });
+</script>

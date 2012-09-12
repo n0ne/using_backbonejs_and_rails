@@ -41,6 +41,21 @@ class App.Views.UserEdit extends Backbone.View
 			wait: true
 			success: (model, response) ->
 				Backbone.history.navigate('users/' + model.get('id'), true)
+			error: @handleError
+
+	handleError: (model, response) ->
+		if response.status == 422
+			errors = $.parseJSON(response.responseText).errors
+			# console.log errors
+			for attribute, messages of errors
+				for message in messages
+					message = message.charAt(0).toUpperCase() + message.slice(1);
+					$("input[name=\'" + attribute + "\']").parent().parent().addClass('error')
+					$("input[name=\'" + attribute + "\']").addClass('error')
+					$("input[name=\'" + attribute + "\']").after('<label for="update_user_name" generated="true" class="error" style="display: block; ">' + message + '</label>')
+					console.log '<label for="new_user_name" generated="true" class="error" style="display: block; ">' + message + '</label>'
+					# $('input[value="Hot Fuzz"]').next().text(" Hot Fuzz");
+					console.log "#{attribute} #{message}"
 
 		# @collection.create attributes,
 		# 	wait:	true

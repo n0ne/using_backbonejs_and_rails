@@ -15,13 +15,15 @@ class App.Views.UserEdit extends Backbone.View
 				email:
 					required:	true
 					minlength: 	2
+					email: 		true
 			messages:
 				name:
-					required: "Title required"
-					minlength: "Title at least 2 characters"
+					required: 	"Name required"
+					minlength: 	"Name at least 2 characters"
 				email:
-					required: "Content required"
-					minlength: "Content at least 2 characters"
+					required: 	"Email required"
+					minlength: 	"Email at least 2 characters"
+					email:		"Must be valid email format"
 			highlight: (element, errorClass) ->
 		       $(element).addClass('error')
 		       $(element).parent().parent().addClass('error')
@@ -46,21 +48,10 @@ class App.Views.UserEdit extends Backbone.View
 	handleError: (model, response) ->
 		if response.status == 422
 			errors = $.parseJSON(response.responseText).errors
-			# console.log errors
 			for attribute, messages of errors
 				for message in messages
 					message = message.charAt(0).toUpperCase() + message.slice(1);
 					$("input[name=\'" + attribute + "\']").parent().parent().addClass('error')
 					$("input[name=\'" + attribute + "\']").addClass('error')
 					$("input[name=\'" + attribute + "\']").after('<label for="update_user_name" generated="true" class="error" style="display: block; ">' + message + '</label>')
-					console.log '<label for="new_user_name" generated="true" class="error" style="display: block; ">' + message + '</label>'
-					# $('input[value="Hot Fuzz"]').next().text(" Hot Fuzz");
-					console.log "#{attribute} #{message}"
 
-		# @collection.create attributes,
-		# 	wait:	true
-		# 	success: (model, response) ->
-		# 		console.log model.get('id')
-		# 		# console.log @collection
-		# 		Backbone.history.navigate('posts/' + model.get('id'), true)
-		# 		# console.log $.parseJSON(response.responseText)

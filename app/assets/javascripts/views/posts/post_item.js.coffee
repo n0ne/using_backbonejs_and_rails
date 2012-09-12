@@ -9,7 +9,6 @@ class App.Views.PostItem extends Backbone.View
 		'click .edit'	: 'editPost'
 
 	render: ->
-		# console.log 'PostItem render function'
 		$(@el).html(@template(post: @model))
 		@
 
@@ -19,10 +18,6 @@ class App.Views.PostItem extends Backbone.View
 			wailt: true
 			success: =>
 				$(@el).fadeOut()
-		# console.log "Delete Item"
-		# console.log event
-		# console.log @model
-		# $(@el).remove()
 
 	editPost: (event) ->
 		event.preventDefault()

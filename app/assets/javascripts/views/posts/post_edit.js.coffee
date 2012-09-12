@@ -34,11 +34,3 @@ class App.Views.PostEdit extends Backbone.View
 			wait: true
 			success: (model, response) ->
 				Backbone.history.navigate('posts/' + model.get('id'), true)
-
-		# @collection.create attributes,
-		# 	wait:	true
-		# 	success: (model, response) ->
-		# 		console.log model.get('id')
-		# 		# console.log @collection
-		# 		Backbone.history.navigate('posts/' + model.get('id'), true)
-		# 		# console.log $.parseJSON(response.responseText)

@@ -1,19 +1,19 @@
-class App.Views.PostItem extends Backbone.View
+class App.Views.UserItem extends Backbone.View
 
-	template: JST['posts/post_item']
+	template: JST['users/user_item']
 
 	tagName:	'li'
 
 	events:
-		'click .delete'	: 'deletePost'
-		'click .edit'	: 'editPost'
+		'click .delete'	: 'deleteUser'
+		'click .edit'	: 'editUser'
 
 	render: ->
 		# console.log 'PostItem render function'
-		$(@el).html(@template(post: @model))
+		$(@el).html(@template(user: @model))
 		@
 
-	deletePost: (event) ->
+	deleteUser: (event) ->
 		event.preventDefault()
 		@model.destroy
 			wailt: true
@@ -24,7 +24,7 @@ class App.Views.PostItem extends Backbone.View
 		# console.log @model
 		# $(@el).remove()
 
-	editPost: (event) ->
+	editUser: (event) ->
 		event.preventDefault()
 
-		Backbone.history.navigate('posts/' + @model.get('id') + '/edit', true)
+		Backbone.history.navigate('users/' + @model.get('id') + '/edit', true)

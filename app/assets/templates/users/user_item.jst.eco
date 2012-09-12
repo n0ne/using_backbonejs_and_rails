@@ -1,0 +1,9 @@
+<div style="width: 85%; float: left;">
+	<a href="#users/<%= @user.escape('id') %>">
+		<%= @user.escape('name') %>
+	</a>
+</div>
+<div>
+	<a href="" class="edit btn btn-primary btn-mini">Edit</a>
+	<a href="" class="delete btn btn-danger btn-mini">Delete</a>
+</div>

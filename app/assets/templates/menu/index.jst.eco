@@ -1,0 +1,13 @@
+<ul class="nav nav-list">
+	<li class="nav-header" >Content</li>
+	<li id="add_post"  class="current"><a data-type="new_post" class="link" href="#posts/new"><i class="icon-file"></i>New post</a></li>
+	<li id="all_posts">
+		<a data-type="posts"  class="link" href="/#">
+			<i class="icon-copy"></i>
+			Posts
+		</a>
+	</li>
+	<li id="all_users"><a data-type="users"  class="link" href="#users"><i class="icon-group"></i>Users</a></li>
+	<li class="divider"></li>
+	<li id="help"><a data-type="help" href="#help" class="link"><i class="icon-question-sign"></i>Help</a></li>
+</ul>

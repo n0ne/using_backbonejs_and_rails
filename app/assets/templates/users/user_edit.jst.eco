@@ -1,0 +1,23 @@
+<h4>Edit User information</h4>
+
+<form class="form-horizontal" id="update_user">
+  <fieldset>
+    <div class="control-group">
+          <label class="control-label" for="input_title">Name</label>
+          <div class="controls">
+            <input type="text" name="name" class="input-xlarge span7" id="update_user_name" autofocus placeholder="Input User name" value="<%= @user.escape('name') %>">
+          </div>
+    </div>
+    <div class="control-group">
+          <label class="control-label" for="input_body">E-mail</label>
+          <div class="controls">
+            <input type="text" name="email" class="input-xlarge span7" id="update_user_email" placeholder="Input User email" value="<%= @user.escape('email') %>">
+          </div>
+    </div>
+    <div class="form-actions">
+      <input type="submit" class="btn btn-primary btn-mini" value="Update" >
+      <a data-type="cancel" class="btn btn-mini" href="#users">Cancel</a>
+    </div>
+  </fieldset>
+
+</form>

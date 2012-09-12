@@ -7,10 +7,31 @@ class App.Views.PostNew extends Backbone.View
 
 	initialize: ->
 		# @collection = new App.Collections.Posts()
-		console.log @collection
+		# console.log @collection
 
 	render: ->
 		$(@el).html(@template())
+		@$('form').validate
+			rules:
+				title:
+					required:	true
+					minlength: 	2
+				body:
+					required:	true
+					minlength: 	2
+			messages:
+				title:
+					required: "Title required"
+					minlength: "Title at least 2 characters"
+				body:
+					required: "Content required"
+					minlength: "Content at least 2 characters"
+			highlight: (element, errorClass) ->
+		       $(element).addClass('error')
+		       $(element).parent().parent().addClass('error')
+			unhighlight: (element, errorClass) ->
+				$(element).removeClass('error')
+				$(element).parent().parent().removeClass('error')
 		@
 
 	createPost: (event) ->

@@ -1,12 +1,23 @@
-Edit post
-<form id="update_post">
-	<p>
-		<label for="title">Title:</label>
-		<input type="text" name="title"   id="update_post_title" value="<%= @post.get('title') %>">
-	</p>
-	<p>
-		<label for="title">Title:</label>
-		<input type="text" name="content" id="update_post_content" value="<%= @post.get('content') %>">
-	</p>
-	<input type="submit" value="Update">
+<h4>Update Post</h4>
+
+<form class="form-horizontal" id="update_post">
+  <fieldset>
+    <div class="control-group">
+          <label class="control-label" for="input_title">Title</label>
+          <div class="controls">
+            <input type="text" name="title" class="input-xlarge span7" id="update_post_title" value="<%= @post.escape('title') %>" autofocus placeholder="Input post title...">
+          </div>
+    </div>
+    <div class="control-group">
+          <label class="control-label" for="input_body">Post body</label>
+          <div class="controls">
+            <textarea name="body" class="input-xlarge span7" id="update_post_content" placeholder="Input post body..."><%= @post.escape('content') %></textarea>
+          </div>
+    </div>
+    <div class="form-actions">
+      <input type="submit" class="btn btn-primary btn-mini" value="Update" >
+      <a data-type="cancel" class="btn btn-mini" href="/#">Cancel</a>
+    </div>
+  </fieldset>
+
 </form>

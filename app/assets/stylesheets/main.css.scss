@@ -4,6 +4,13 @@
 body {
 	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 	font-size: 13px;
+	line-height: 18px;
+	padding-top: 0px;
+}
+
+h2 {
+	text-align: center;
+	margin-bottom: 20px;
 }
 
 h4 {
@@ -11,7 +18,7 @@ h4 {
 	line-height: 18px;
 }
 
-ul {
+#content ul {
   list-style: none;
   margin: 0;
   padding: 0;
@@ -27,13 +34,61 @@ ul {
 	margin-right: 5px;
 	overflow: auto;
 	height: 300px;
-	width: 650px;
+	// width: 650px;
 }
 
-li {
+#content li {
   border-bottom: solid 1px #CCC;
   padding: 10px 10px;
-  font-size: 16px;
   position: relative;
 }
 
+a i {
+	color: #999;
+}
+.current i {
+	color: white;
+}
+
+.current > a {
+	color: white;
+	// text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.2);
+	background-color: #08C;
+}
+
+.nav-list > li > a:hover {
+	color: white;
+	text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.2);
+	background-color: #08C;
+}
+
+.nav-list > li > a:hover i {
+	color: white;
+}
+
+// label.valid {
+//   width: 24px;
+//   height: 24px;
+//   background: url(assets/img/valid.png) center center no-repeat;
+//   display: inline-block;
+//   text-indent: -9999px;
+// }
+
+label.error {
+  // font-weight: bold;
+  font-style: italic;
+  color: #B94A48;
+  padding: 2px 8px;
+  margin-top: 2px;
+}
+
+.item {
+	padding: 8px 0px 8px 0px;
+}
+
+.footer .container{
+	padding: 20px 0;
+	margin-top: 30px;
+	border: 1px solid #E5E5E5;
+	background-color: whiteSmoke;
+}

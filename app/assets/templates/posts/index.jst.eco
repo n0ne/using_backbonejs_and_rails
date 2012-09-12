@@ -1,8 +1,14 @@
-<h4>All posts</h4>
+<!-- <h4>All posts</h4>
 <p>
 	<a href="#posts/new">Add Post</a>
 </p>
-
+ -->
+<div style="width: 85%; float: left; margin-bottom: 20px;">
+	Title
+</div>
+<div style="margin-bottom: 20px;">
+	Action
+</div>
 <div id='postsList'>
 	<ul id="postslist"></ul>
 </div>

@@ -1,17 +1,75 @@
-<div id="container">
-	<div id="content">All post here</div>
+<div class="container">
+  <div class="navbar">
+    <div class="navbar-inner">
+      <div class="container">
+        <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </a>
+        <a class="brand" href="#">Backbone.js & Rails</a>
+        <div class="nav-collapse">
+          <ul class="nav">
+            <li class="active"  id="home_link"><a href="#">Home</a></li>
+            <li  id="add_post_link"><a href="#posts/new">Add Post</a></li>
+            <li  id="add_user_link"><a href="#users/new">Add User</a></li>
+          </ul>
+          <ul class="nav pull-right">
+            <li class="divider-vertical"></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Resources <b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li><a href="http://backbonejs.org/">Backbone.js</a></li>
+                <li><a href="http://twitter.github.com/bootstrap/index.html">Twitter Bootstrap</a></li>
+                <li><a href="http://rubyonrails.org/">Ruby on Rails</a></li>
+                <li><a href="http://bassistance.de/jquery-plugins/jquery-plugin-validation/">jQuery Validation</a></li>
+                <li class="divider"></li>
+                <li><a href="http://railscasts.com/episodes?utf8=%E2%9C%93&search=backbone">Railscasts</a></li>
+                <li><a href="https://peepcode.com/products/backbone-iii">PeepCode</a></li>
+                <li><a href="http://coenraets.org/blog/2012/01/backbone-js-lessons-learned-and-improved-sample-app/">CHRISTOPHE COENRAETS</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div><!-- /.nav-collapse -->
+      </div>
+    </div><!-- /navbar-inner -->
+  </div>
+</div>
+
+<div class="container">
+<h2>Some App</h2>
+
+	<div class="row">
+        <div class="span3">
+          <div id="sidebar">
+          	Some menu
+          </div>
+        </div>
+        <div class="span9">
+          <div id="content">
+          </div>
+        </div>
+	</div>
 </div>
 
 
+
+
+
+
 <%= content_tag :div, '', id: "all_posts_data", data: {posts: Post.all} %>
+<%= content_tag :div, '', id: "all_users_data", data: {users: User.all} %>
 <!--
 <% @posts.each do |post| %>
 	<li><%= post.title %></li>
 <% end %>
  -->
-<script>
-	// $(document).ready(function() {
-	    // var posts = new App.Collections.Posts();
-		//posts.reset(<%= raw(Post.all.to_json) %>);
-	// });
-</script>
+<footer class="footer">
+  <div class="container">
+    <p style="text-align: center;">
+      &copy;
+      <a href="http://www.none.com.ua">none</a>, 2012
+
+    </p>
+  </div>
+</footer>

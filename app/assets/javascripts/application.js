@@ -12,6 +12,8 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require jquery.validate
+//= require twitter/bootstrap
 //= require underscore
 //= require backbone
 //= require .//app

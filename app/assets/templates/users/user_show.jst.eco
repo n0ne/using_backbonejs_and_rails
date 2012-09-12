@@ -2,23 +2,23 @@
 	<div class="span8">
 		<div class="row item">
 			<div class="span2">
-				Title:
+				Name:
 			</div>
 		    <div class="span6">
-		    	<%= @post.escape('title') %>
+		    	<%= @user.escape('name') %>
 		    </div>
 		</div>
 		<div class="row item">
 			<div class="span2">
-				Content:
+				Email:
 			</div>
 		    <div class="span6">
-		    	<%= @post.escape('content') %>
+		    	<%= @user.escape('email') %>
 		    </div>
 		</div>
 		<div class="form-actions">
 			<a class="btn btn-primary btn-mini edit">Edit</a>
-			<a href="/#" class="btn btn-mini">Cancel</a>
+			<a href="#users" class="btn btn-mini">Cancel</a>
 		</div>
 	</div>
 </div>

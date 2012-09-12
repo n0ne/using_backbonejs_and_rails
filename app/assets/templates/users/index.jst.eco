@@ -1,0 +1,13 @@
+<div style="width: 85%; float: left; margin-bottom: 20px;">
+	User
+</div>
+<div style="margin-bottom: 20px;">
+	Action
+</div>
+<div class='usersList'>
+	<ul id="userslist"></ul>
+</div>
+
+<div class="form-actions">
+	<a href="#users/new" class="btn btn-mini">Add User</a>
+</div>

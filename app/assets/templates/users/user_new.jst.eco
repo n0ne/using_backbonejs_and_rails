@@ -1,0 +1,23 @@
+<h4>New User</h4>
+
+<form class="form-horizontal" id="new_user">
+  <fieldset>
+    <div class="control-group">
+          <label class="control-label" for="input_title">Name</label>
+          <div class="controls">
+            <input type="text" name="name" class="input-xlarge span7" id="new_user_name" autofocus placeholder="Input User name">
+          </div>
+    </div>
+    <div class="control-group">
+          <label class="control-label" for="input_body">E-mail</label>
+          <div class="controls">
+            <input type="text" name="email" class="input-xlarge span7" id="new_user_email" placeholder="Input User email">
+          </div>
+    </div>
+    <div class="form-actions">
+      <input type="submit" class="btn btn-primary btn-mini" value="Create" >
+      <a data-type="cancel" class="btn btn-mini" href="#users">Cancel</a>
+    </div>
+  </fieldset>
+
+</form>

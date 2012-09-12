@@ -1,11 +1,11 @@
-<li>
-	<div style="width: 500px; float: left;">
-		<a href="#posts/<%= @post.get('id') %>">
-			<%= @post.get('title') %>
+<!-- <li> -->
+	<div style="width: 85%; float: left;">
+		<a href="#posts/<%= @post.escape('id') %>">
+			<%= @post.escape('title') %>
 		</a>
 	</div>
 	<div>
-		<a href="" class="edit">Edit</a>
-		<a href="" class="delete">Delete</a>
+		<a href="" class="edit btn btn-primary btn-mini">Edit</a>
+		<a href="" class="delete btn btn-danger btn-mini">Delete</a>
 	</div>
-</li>
+<!-- </li> -->

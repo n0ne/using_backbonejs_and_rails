@@ -4,7 +4,7 @@ A small application that demonstrates the work of these programs together.
 
 More information about [Backbone.js](http://backbonejs.org/).
 
-Working example can be found on [Heroku](http://spinejs-and-rails.herokuapp.com/)
+Working example can be found on [Heroku](http://backbonejs-and-rails.herokuapp.com/)
 
 
 ## Getting Started
